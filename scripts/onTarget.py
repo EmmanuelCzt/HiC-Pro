@@ -55,7 +55,7 @@ def load_bed(in_file, verbose=False):
     intervals = {}
     if verbose:
         print("## Loading BED file {} ...".format(in_file), file=sys.stderr)
-    with open(infile, 'r') as bed_handle:
+    with open(in_file, 'r') as bed_handle:
         nline = 0
         for line in bed_handle:
             nline +=1
@@ -156,12 +156,12 @@ if __name__ == "__main__":
             if len(res1) > 0 and len(res2) > 0:
                 ontarget_counter += 1
                 ontarget_cap_cap_counter += 1
-                print line.strip()
+                print(line.strip())
             elif len(res1) > 0 or len(res2) > 0:
                 ontarget_counter += 1
                 ontarget_cap_rep_counter += 1
                 if not cis:
-                    print line.strip()
+                    print(line.strip())
 
         if statsFile is not None:
             if verbose:
